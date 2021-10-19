@@ -9,7 +9,7 @@ const ExpenseItem = (props) => {
       <div>{date.toISOString()}</div>
       <div className='expense-item_description'>
         <h2>{title}</h2>
-        <div className='expense-item_price'></div>
+        <div className='expense-item_price'>${amount}</div>
       </div>
     </div>
   )
