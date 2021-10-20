@@ -1,11 +1,9 @@
 import './Card.scss'
 
-const Card = () => {
+const Card = (props) => {
 
   return (
-    <div className='card'>
-
-    </div>
+    <div className='card'>{props.children}</div>
   )
 }
 
