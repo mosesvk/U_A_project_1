@@ -3,8 +3,8 @@ import './Card.scss'
 const Card = () => {
 
   return (
-    <div>
-      
+    <div className='card'>
+
     </div>
   )
 }
