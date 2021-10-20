@@ -1,4 +1,4 @@
-import './ExpenseItem.css'
+import './ExpenseItem.scss'
 import ExpenseDate from './ExpenseDate'
 
 const ExpenseItem = (props) => {
