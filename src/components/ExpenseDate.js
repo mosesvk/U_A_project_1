@@ -1,3 +1,4 @@
+import './ExpenseDate.scss'
 
 const ExpenseDate = (props) => {
   const {date} = props
@@ -7,7 +8,7 @@ const ExpenseDate = (props) => {
   const year = date.getFullYear();
 
   return (
-    <div>
+    <div id='expense-date'>
       <p>{month}</p>
       <p>{day}</p>
       <p>{year}</p>
