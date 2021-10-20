@@ -9,6 +9,10 @@
   background-color: #4b4b4b;
 }
 
+.expense-item p {
+  margin: 0;
+}
+
 .expense-item__description {
   display: flex;
   flex-direction: column;
