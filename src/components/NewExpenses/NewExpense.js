@@ -1,11 +1,12 @@
 
+import ExpenseForm from './ExpenseForm'
 import './NewExpense.scss'
 
 const NewExpense = () => {
   return (
     <div className='new-expense'>
-      <form></form>
-    </div>
+      <ExpenseForm />
+    </div> 
   )
 }
 
