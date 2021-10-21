@@ -1,7 +1,16 @@
-
+import {useState} from 'react'
 import './ExpenseForm.scss'
 
 const ExpenseForm = () => {
+  const [enteredTitle, setEnteredTitle] = useState('')
+  const [enteredAmount, setEnteredAmount] = useState('')
+  const titleChangeHandler = (event) => {
+    setEnteredTitle(event.target.value)
+  }
+
+  const amountChangeHandler = (event) => {
+
+  }
 
   return (
     <div className='new-expense__controls'>
@@ -9,7 +18,7 @@ const ExpenseForm = () => {
         className='new-expense__control'
       >
         <label>Type</label>
-        <input type='text' />
+        <input type='text' onChange={titleChangeHandler}/>
       </div>
 
       <div
