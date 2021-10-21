@@ -3,8 +3,8 @@ import './NewExpense.scss'
 
 const NewExpense = () => {
   return (
-    <div>
-      
+    <div className='new-expense'>
+      <form></form>
     </div>
   )
 }
