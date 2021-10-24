@@ -38,6 +38,8 @@ const ExpenseForm = (props) => {
       date: enteredDate
     }
 
+    //console.log(enteredDate.toLocaleString('en-US', {month: 'long'}))
+
     props.onSaveExpenseData(expenseData);
     setEnteredTitle('')
     setEnteredAmount('')
