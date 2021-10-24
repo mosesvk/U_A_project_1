@@ -5,8 +5,8 @@ const ExpenseDate = (props) => {
 
   const month = date.toLocaleString('en-US', {month: 'long'})
   const day = date.toLocaleString('en-US', {day: '2-digit'})
-  var start = new Date(date.value);
-  const year = start.getFullYear();
+  //var start = new Date(date.value);
+  const year = date.getFullYear();
 
   return (
     <div id='expense-date'>

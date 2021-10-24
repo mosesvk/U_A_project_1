@@ -9,7 +9,6 @@ const ExpenseItem = (props) => {
   
   const clickHandler = () => {
     setDateTitle('Updated!')
-    
   }
 
   return (
