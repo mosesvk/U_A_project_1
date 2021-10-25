@@ -12,6 +12,8 @@ const Expenses = (props) => {
     setFilteredYear(selectedYear)
   }
 
+  console.log(props.expenses)
+
   return (
     <Card className='expenses'> 
 

@@ -6,18 +6,8 @@ const ExpenseForm = (props) => {
   const [enteredAmount, setEnteredAmount] = useState('')
   const [enteredDate, setEnteredDate] = useState('')
 
-  // const [userInput, setUserInput] =useState({
-  //   enteredTitle: '', 
-  //   enteredAmount: '', 
-  //   enteredDate: ''
-  // })
-
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value)
-
-    // setUserInput((prevState) => {
-    //   return {...prevState, enteredTitle: event.target.value}
-    // })
   }
 
   const amountChangeHandler = (event) => {
@@ -30,16 +20,17 @@ const ExpenseForm = (props) => {
   }
 
   const submitHandler = (event) => {
-    // this stops the page from reloading since the form onsubmit will automatically do that by default
     event.preventDefault();
+
+    console.log(enteredDate)
 
     const expenseData = {
       title: enteredTitle,
       amount: enteredAmount,
-      date: enteredDate
+      date: new Date(enteredDate.replace(/-/g, '\/').replace(/T.+/, ''))
     }
 
-    //console.log(enteredDate.toLocaleString('en-US', {month: 'long'}))
+    console.log(new Date(enteredDate))
 
     props.onSaveExpenseData(expenseData);
     setEnteredTitle('')
