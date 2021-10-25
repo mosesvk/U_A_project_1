@@ -26,6 +26,7 @@ const ExpenseForm = (props) => {
 
   const dateChangeHandler = (event) => {
     setEnteredDate(event.target.value)
+    console.log(event.target.value)
   }
 
   const submitHandler = (event) => {
