@@ -5,23 +5,21 @@ import './ExpensesList.scss'
 const ExpensesList = (props) => {
   const {filteredExpenses} = props
 
-  // Reusable variable to input into the component...
-  let expensesContent = <p>No Expenses Found</p>;
-  if (filteredExpenses.length > 0) {
-    expensesContent = filteredExpenses.map((expense) => (
-      <ExpenseItem
-        key={expense.id}
-        title={expense.title}
-        amount={expense.amount}
-        date={expense.date}
-      />
-    ))
+  if (filteredExpenses.length === 0) {
+    return <h2 className='expenses-list__fallback'>Found No Expenses</h2>
   }
 
   return (
-    <div>
-      
-    </div>
+    <ul className='expenses-list'>
+      {filteredExpenses.map((expense) => (
+        <ExpenseItem
+          key={expense.id}
+          title={expense.title}
+          amount={expense.amount}
+          date={expense.date}
+        />
+      ))}
+    </ul>
   )
 }
 
